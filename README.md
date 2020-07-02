@@ -49,3 +49,6 @@ Recorded voice message and play it later
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Work%20Flow.png)
 
 This model is designed to combine all the separate parts altogether. And even the same commands are inputted different responses will be given according to different current states.
+
+## Reference
+Link: https://github.com/msubzero2000/Qrio-public.git
