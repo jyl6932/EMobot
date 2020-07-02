@@ -9,7 +9,6 @@ Out EMobot is your personal emotional health carer. It will create comfort, priv
 Demo Link:https://www.youtube.com/watch?v=OSAoHcLSiaE&t=6s
 
 ## Pre-requirement
-
 ### Hardware
 Jetson Nano
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/jetson%20nano.jpg)
@@ -26,7 +25,6 @@ sudo apt-get install chromium-chromedriver
 ```
 
 ## System Flow
-
 ### Animation part
 Using arcade to build visualization part. It supports a game animation loop and is able to render/display a sprite(PNG image with transparency) with rotation and scaling.
 
@@ -40,7 +38,6 @@ Using arcade to build visualization part. It supports a game animation loop and 
 Previously I am using pyttsc3 as voice output. It sounds like an alien. Therefore, I decided to use Amazon Polly as the output voice. The voice quality is 100 times better and there is no noticeable delay.
 
 ### Function part
-
 #### Music 
 Recommend different music lists according to different users' emotions. I decided to play music through the Youtube platform.
 Therefore, the search and click function is needed. The best way to do this is by using an automation test suite, which can control a web browser to perform a search on YouTube and play the video from the search result.
