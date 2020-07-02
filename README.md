@@ -45,7 +45,7 @@ Therefore, the search and click function is needed. The best way to do this is b
 #### MessageBox
 Recorded voice message and play it later
 
-### Coordinate system
+#### Coordinate system
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Work%20Flow.png)
 
 This model is designed to combine all the separate parts altogether. And even the same commands are inputted different responses will be given according to different current states.
