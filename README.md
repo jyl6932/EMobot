@@ -95,11 +95,11 @@ This model is designed to combine all the separate parts altogether. And even th
 2. Update your key and secret in `speech.py`.
  
 ### Debugging (Mac, could not use voice input/output function)
-1. Update the 6 lines **IS_JETSON = No**. And then the code could be suitable for Mac environmnet.
+1. Update the 6th lines **IS_JETSON = No** in `congfig.py`. And then the code could be suitable for Mac environmnet.
 2. Run `emobot.py` to start the project.
 
 ### Application (Jetson)
-1. Update the 6 lines **IS_JETSON = Yes**. And then the code could be suitable for Jetson environmnet.
+1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for Jetson environmnet.
 2. Run `emobot.py` to start the project.
 3. Give your commonds according to conversation guidline. Mainly `Yes` and `No` to control the emobot. And also when the emobot is playing the video, you can also using `Stop` commond to stop it. Otherwise, it will automatically stop after 50s.
 
