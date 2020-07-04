@@ -80,14 +80,14 @@ This model is designed to combine all the separate parts altogether. And even th
     
 * **Function Part** (build music and messageBox functions)
   * *Build music part* 
-    * *browerServiceJetson.py* (based on Jetson environment)
+    * *browerServiceJetson.py* (based on Jetson environment) (automatically search and click the web browser according to differenct keywords)
     * *browerServiceMac.py* (based on Mac environment)
   * *Build messageBox* 
     * *messageBox.py* (recored message and play the message later)
     
 * **Control Part** (combined seperate parts all together)
   * *Control center* 
-    * *brainStateMachine.py* (give differenct voice output according to differenct input commonds and states)
+    * *brainStateMachine.py* (give differenct voice outputs and feedbacks according to differenct input commonds and states)
     
 ## Running the Project!
 ### Build your own AWS account first
