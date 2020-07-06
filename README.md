@@ -12,27 +12,28 @@ Demo Link: https://www.youtube.com/watch?v=OSAoHcLSiaE&t=6s
 
 ## Pre-requirement
 ### Hardware
-Jetson Nano
+* **Jetson Nano**
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/jetson%20nano.jpg)
+* **Television**（or you can just use the screen monitor and add a speaker to Jetson to output the voice)
+* **HDMI cable**（or any other cable which could transform both image and voice signals)
+* **Microphone**
 
 ### Software(Library)
 Arcade, boto3, selenium, Chromium driver
+* **Arcade**
+  * *Arcade is an easy-to-learn Python library for creating 2D video games. By using this framework, we could build the visualization part.*
+* **boto3**
+  * *Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2. Here, we gonna use Amazon Polly which turned the text into lifelike speech using deep learning.*
+* **selenium**
+  * *Selenium is a portable framework for testing web applications. We will use it to do the auto search and click the web browser. By doing that, to finish the music part.*
+* **Chromium driver**
+  * *WebDriver is an open source tool for automated testing of webapps across many browsers.*
 
 #### SETUP
-Arcade is an easy-to-learn Python library for creating 2D video games. By using this framework, we could build the visualization part.
 ```
 pip install arcade
-```
-Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2. Here, we gonna use Amazon Polly which turned the text into lifelike speech using deep learning.
-```
 pip install boto3
-```
-Selenium is a portable framework for testing web applications. We will use it to do the auto search and click the web browser. By doing that, to finish the music part.
-```
 pip install selenium
-```
-WebDriver is an open source tool for automated testing of webapps across many browsers.
-```
 sudo apt-get install chromium-chromedriver
 ```
 
@@ -98,6 +99,12 @@ This model is designed to combine all the separate parts altogether. And even th
 * **Control Part** (combined separate parts altogether)
   * *Control center* 
     * *brainStateMachine.py* (give different voice outputs and feedbacks according to different input commands and states)
+
+* **Others** (some useful tools or images)
+  * *poppy folder* 
+    * *This folder included all the PNG files which are needed to build the character. Include: head, body, left arm, right arm...* 
+  * *utilities folder* 
+    * *Some basic tools which were used in previous parts. For example: `stopwatch.py` is a tool to time the duration between each state since the state changed. By doing that we can calculate how long the user absent.* 
     
 ## Running the Project!
 ### Build your own AWS account first
@@ -111,11 +118,20 @@ This model is designed to combine all the separate parts altogether. And even th
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Details.png)
 
 ### Application (Jetson)
-1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for Jetson environment.
+1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for the Jetson environment.
 2. Run `emobot.py` to start the project.
 3. Say `Hello` to EMobot and then the robot will be wake up.
-4. After wake up, EMobot will greet the user first
+4. After wake up, EMobot will greet the user first and then ask users' current EMotion. By saying a keyword, the user could express his current emotion to EMobot.(Happy/Angry/Blue(sad))
+5. Then, EMobot will ask the user which function he wants to use like `MessageBox` and `Music`. EMobot will wait until the user gives some feedback. Otherwise, he will wait for 5s and ask it again.
+6. If the user chooses `MessageBox`, EMobot will ask again whether the user wants to use record a new message or play the previous one. If the user chooses `record`, he will have 15s to record his current feelings. If user choose `play`, EMobot will choose a random message from previously recorded messages.
+7. If the user chooses `Music`, EMobot will play the music which is relative to the user's current feelings (like happy/angry/sad). EMobot will automatically search and click the video for the user. And it will kindly help users click the full-screen button and also nicely escape the advertises. The user could by saying `Stop` to stop the video otherwise it will automatically stop after the 50s.
+(In `browerServiceJetson.py` and `browerServiceMac.py` parts decide the keywords the system search and play. For exmaple: when the user is happy, EMobot will search `happymv2020`.)
+8. For all the above functions, after one function finished, the user could decide to move to the other function area or keep in the loop.
+9. For each switch part, the user could say `no` to quit the system. Then, EMobot will become an idle state and wait to be activated again.
+10. After EMobot is activated, if there is no input for more than the 20s in any state, EMobot will automatically become an idle state. User could say hello to re-activate it again.
 
 
 ## Reference
+Thanks to `msubzero2000`, I could build the skeletal animation system from the ground.
+
 Link: https://github.com/msubzero2000/Qrio-public.git
