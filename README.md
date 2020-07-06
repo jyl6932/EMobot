@@ -2,7 +2,7 @@
 
 With the development of modern society, people are facing serious mental problems such as depression, happiness, and lack of family connection. Expressing their real feeling is an important way to balance mental health. However, people are afraid to express their own feelings with other people. They usually need some comfort area to take off the fake masks such as a home. Therefore, there is a necessary need for people to create a comfort zone at home to express their real emotional feelings.
 
-Out EMobot is your personal emotional health carer. It will create comfort, privacy, and comfort zone for you to express your own feelings. We go using humanize conversation to ask your current feelings and according to your feelings to recommond adequate music. Or you can just simply record your feeling through voice message and recall it later.
+Our EMobot is your personal emotional health carer. It will create comfort, privacy, and comfort zone for you to express your own feelings. We go using humanize conversation to ask your current feelings and according to your feelings to recommond adequate music. Or you can just simply record your feeling through voice message and recall it later.
 
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/cut.png)
 
@@ -19,10 +19,20 @@ Jetson Nano
 Arcade, boto3, selenium, Chromium driver
 
 #### SETUP
+Arcade is an easy-to-learn Python library for creating 2D video games. By using this framework, we could build the visualization part.
 ```
-pip3 install arcade
-pip3 install boto3
-pip3 install selenium
+pip install arcade
+```
+Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2. Here, we gonna use Amazon Polly which turned the text into lifelike speech using deep learning.
+```
+pip install boto3
+```
+Selenium is a portable framework for testing web applications. We will use it to do the auto search and click the web browser. By doing that, to finish the music part.
+```
+pip install selenium
+```
+WebDriver is an open source tool for automated testing of webapps across many browsers.
+```
 sudo apt-get install chromium-chromedriver
 ```
 
@@ -50,7 +60,7 @@ Recorded voice message and play it later
 #### Coordinate system
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Work%20Flow.png)
 
-This model is designed to combine all the separate parts altogether. And even the same commonds are inputted different responses will be given according to different current states.
+This model is designed to combine all the separate parts altogether. And even the same commands are inputted different responses will be given according to different current states.
 
 ## Project Structure
 * **Main Loop**
@@ -59,7 +69,7 @@ This model is designed to combine all the separate parts altogether. And even th
 
 * **Animation Part**
   * *Build the character*
-    * *robot.py*  (build up the character from ground)
+    * *robot.py*  (build up the character from the ground)
     * *robotPart.py* 
   * *Build a skeletal animation system(SAS)* (By doing that we could join several objects together in a hierarchical relationship. Thus, when you apply a transformation to an object, it will also affect all of its children)
     * *morphTarget.py*
@@ -80,14 +90,14 @@ This model is designed to combine all the separate parts altogether. And even th
     
 * **Function Part** (build music and messageBox functions)
   * *Build music part* 
-    * *browerServiceJetson.py* (based on Jetson environment) (automatically search and click the web browser according to differenct keywords)
+    * *browerServiceJetson.py* (based on Jetson environment) (automatically search and click the web browser according to different keywords)
     * *browerServiceMac.py* (based on Mac environment)
   * *Build messageBox* 
     * *messageBox.py* (recored message and play the message later)
     
-* **Control Part** (combined seperate parts all together)
+* **Control Part** (combined separate parts altogether)
   * *Control center* 
-    * *brainStateMachine.py* (give differenct voice outputs and feedbacks according to differenct input commonds and states)
+    * *brainStateMachine.py* (give different voice outputs and feedbacks according to different input commands and states)
     
 ## Running the Project!
 ### Build your own AWS account first
@@ -95,13 +105,13 @@ This model is designed to combine all the separate parts altogether. And even th
 2. Update your key and secret in `speech.py`.
  
 ### Debugging (Mac, could not use voice input/output function)
-1. Update the 6th lines **IS_JETSON = No** in `congfig.py`. And then the code could be suitable for Mac environmnet.
+1. Update the 6th lines **IS_JETSON = No** in `congfig.py`. And then the code could be suitable for Mac environment.
 2. Run `emobot.py` to start the project.
 
 ### Application (Jetson)
-1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for Jetson environmnet.
+1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for Jetson environment.
 2. Run `emobot.py` to start the project.
-3. Give your commonds according to conversation guidline. Mainly `Yes` and `No` to control the emobot. And also when the emobot is playing the video, you can also using `Stop` commond to stop it. Otherwise, it will automatically stop after 50s.
+3. Give your commands according to the conversation guideline. Mainly `Yes` and `No` to control the EMobot. And also when the EMobot is playing the video, you can also using `Stop` command to stop it. Otherwise, it will automatically stop after the 50s.
 
 
 ## Reference
