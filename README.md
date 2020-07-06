@@ -60,7 +60,7 @@ Therefore, the search and click function is needed. The best way to do this is b
 
 Recorded voice message and play it later
 
-#### Coordinate system
+### Coordinate system
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Work%20Flow.png)
 
 This model is designed to combine all the separate parts altogether. And even the same commands are inputted different responses will be given according to different current states.
@@ -123,13 +123,13 @@ This model is designed to combine all the separate parts altogether. And even th
 1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for the Jetson environment.
 2. Run `emobot.py` to start the project.
 3. Say `Hello` to EMobot and then the robot will be wake up.
-4. After wake up, EMobot will greet the user first and then ask users' current EMotion. By saying a keyword, the user could express his current emotion to EMobot.(Happy/Angry/Blue(sad))
+4. After wake up, EMobot will greet the user first and then ask users' current emotion. By saying a keyword, the user could express his current emotion to EMobot.(Happy/Angry/Blue(sad))
 5. Then, EMobot will ask the user which function he wants to use like `MessageBox` and `Music`. EMobot will wait until the user gives some feedback. Otherwise, he will wait for 5s and ask it again.
-6. If the user chooses `MessageBox`, EMobot will ask again whether the user wants to use record a new message or play the previous one. If the user chooses `record`, he will have 15s to record his current feelings. If user choose `play`, EMobot will choose a random message from previously recorded messages.
+6. If the user chooses `MessageBox`, EMobot will ask again whether the user wants to use record a new message or play the previous one. If the user chooses `Record`, he will have 15s to record his current feelings. If user choose `Play`, EMobot will choose a random message from previously recorded messages.
 7. If the user chooses `Music`, EMobot will play the music which is relative to the user's current feelings (like happy/angry/sad). EMobot will automatically search and click the video for the user. And it will kindly help users click the full-screen button and also nicely escape the advertises. The user could by saying `Stop` to stop the video otherwise it will automatically stop after the 50s.
 (In `browerServiceJetson.py` and `browerServiceMac.py` parts decide the keywords the system search and play. For exmaple: when the user is happy, EMobot will search `happymv2020`.)
 8. For all the above functions, after one function finished, the user could decide to move to the other function area or keep in the loop.
-9. For each switch part, the user could say `no` to quit the system. Then, EMobot will become an idle state and wait to be activated again.
+9. For each switch part, the user could say `No` to quit the system. Then, EMobot will become an idle state and wait to be activated again.
 10. After EMobot is activated, if there is no input for more than the 20s in any state, EMobot will automatically become an idle state. User could say hello to re-activate it again.
 
 
