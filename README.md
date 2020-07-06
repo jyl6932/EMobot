@@ -6,10 +6,14 @@ Our EMobot is your personal emotional health carer. It will create comfort, priv
 
 ![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/cut.png)
 
-Project Lik: https://docs.google.com/presentation/d/1cQQksk3V0y7aBJYp5pXlpaaUDUwxtOO3svfX_hI0bAU/edit#slide=id.g8a23483449_0_144
+### Project Lik:
 
-Demo Link: https://www.youtube.com/watch?v=OSAoHcLSiaE&t=6s
+<a href="https://docs.google.com/presentation/d/e/2PACX-1vRV4hTVxvMwL2-cW7AQWqQZaqwLYtCCbmfAFmqT6thhSxGpXmAa5GkWOieqbvCxZ4j49-3juYPMV_n1/pub?start=false&loop=false&delayms=3000" target="blank"><img src="https://i.ibb.co/31fLwyV/ppt.png" alt="Jet Presentation: the slides deck" width="640" height="360" border="0" /></a>
 
+### Demo Link:
+
+<a href="https://www.youtube.com/watch?v=OSAoHcLSiaE&t=6s" target="blank"><img src="https://i.ibb.co/0CT7fRj/video.png" 
+alt="Jet Presentation: the showcase video" width="640" height="360" border="0" /></a>
 ## Pre-requirement
 ### Hardware
 * **Jetson Nano**
