@@ -85,8 +85,8 @@ This model is designed to combine all the separate parts altogether. And even th
     * *speechRecognition.py* (speech to text implementation part)
   * *Build speach output* 
     * *audio.py*
-    * *speech.py* (make AWS Polly working, text to speech implementation part))
-    * *intent.py* (give some feedback based on different states)
+    * *speech.py* (make AWS Polly working, text to speech implementation part I)
+    * *intent.py* (give some feedback based on different states, text to speech implementation part II)
     
 * **Function Part** (build music and messageBox functions)
   * *Build music part* 
