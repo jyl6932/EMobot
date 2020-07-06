@@ -51,11 +51,13 @@ Using arcade to build visualization part. It supports a game animation loop and 
 Previously I am using pyttsc3 as voice output. It sounds like an alien. Therefore, I decided to use Amazon Polly as the output voice. The voice quality is 100 times better and there is no noticeable delay.
 
 ### Function part
-#### Music 
+* **Music**
+
 Recommend different music lists according to different users' emotions. I decided to play music through the Youtube platform.
 Therefore, the search and click function is needed. The best way to do this is by using an automation test suite, which can control a web browser to perform a search on YouTube and play the video from the search result.
 
-#### MessageBox
+* **MessageBox**
+
 Recorded voice message and play it later
 
 #### Coordinate system
