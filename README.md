@@ -108,13 +108,13 @@ This model is designed to combine all the separate parts altogether. And even th
 1. Update the 6th lines **IS_JETSON = No** in `congfig.py`. And then the code could be suitable for Mac environment.
 2. Run `emobot.py` to start the project.
 
-![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Function details.png)
+![](https://github.com/jyl6932/EMobot/blob/master/IntroImage/Details.png)
 
 ### Application (Jetson)
 1. Update the 6th lines **IS_JETSON = Yes** in `congfig.py`. And then the code could be suitable for Jetson environment.
 2. Run `emobot.py` to start the project.
 3. Say `Hello` to EMobot and then the robot will be wake up.
-3. Give your commands according to the conversation guideline. Mainly `Yes` and `No` to control the EMobot. And also when the EMobot is playing the video, you can also using `Stop` command to stop it. Otherwise, it will automatically stop after the 50s.
+4. After wake up, EMobot will greet the user first
 
 
 ## Reference
